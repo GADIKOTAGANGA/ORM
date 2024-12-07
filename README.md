@@ -18,7 +18,9 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 # PROGRAM
-```from django.db import models
+```
+models.py:
+from django.db import models
 from django.contrib import admin
 
 
@@ -32,12 +34,14 @@ class Loan(models.Model):
 
 class LoanAdmin(admin.ModelAdmin):
     list_display=('customer_id', 'loan_type', 'loan_amount', 'interest_rate', 'loan_term_in_years', 'start_date')
-# Register your models here.
+admin.py:
 from django.contrib import admin
 from .models import Loan, LoanAdmin
 
 admin.site.register(Loan, LoanAdmin)
 ```
+# Register your models here.
+
 # OUTPUT
 ![pn1](https://github.com/user-attachments/assets/08e59789-2f82-4d41-b0ce-75f22df8c9a6)
 ![pn](https://github.com/user-attachments/assets/4d16dea6-a29a-4706-b3ba-75b99395488c)
